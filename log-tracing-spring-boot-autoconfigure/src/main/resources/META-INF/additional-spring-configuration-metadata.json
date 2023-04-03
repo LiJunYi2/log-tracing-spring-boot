@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "log.tracing",
+      "type": "cn.lijunyi.logtracing.config.autoconfigure.JsonParserProperties",
+      "sourceType": "cn.lijunyi.logtracing.config.autoconfigure.JsonParserProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "log.tracing.json-parser-name",
+      "type": "java.lang.String",
+      "description": "设置JSON解析器，可选[fastjson2,jackson].",
+      "sourceType": "cn.lijunyi.logtracing.config.autoconfigure.JsonParserProperties",
+      "defaultValue": "fastjson2"
+    }
+  ],
+  "hints": [
+    {
+      "name": "log.tracing.json-parser-name",
+      "values": [
+        {
+          "value": "fastjson2",
+          "description": "fastjson2."
+        },
+        {
+          "value": "jackson",
+          "description": "jackson."
+        }
+      ]
+    }
+  ]
+}

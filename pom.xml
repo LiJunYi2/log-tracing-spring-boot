@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <groupId>cn.lijunyi</groupId>
+  <artifactId>log-tracing-spring-boot</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>log-tracing-spring-boot</name>
+  <description>基于aop实现的系统日志以及脱敏插件，引入即用</description>
+  <url>https://github.com/LiJunYi2/boot-logging-plugin</url>
+
+  <modules>
+    <module>log-tracing-spring-boot-starter</module>
+    <module>log-tracing-spring-boot-autoconfigure</module>
+  </modules>
+
+  <issueManagement>
+    <system>Github Issue</system>
+    <url>https://github.com/LiJunYi2/log-tracing-spring-boot/issues</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>LiJunYi</id>
+      <name>LiJunYi</name>
+      <email>ljy0hz4kzv7he@foxmail.com</email>
+      <timezone>GMT-7</timezone>
+      <organizationUrl>https://github.com/LiJunYi2</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git@github.com:LiJunYi2/log-tracing-spring-boot.git</connection>
+    <developerConnection>scm:git@github.com:LiJunYi2/log-tracing-spring-boot.git</developerConnection>
+    <url>https://github.com/LiJunYi2/log-tracing-spring-boot.git</url>
+  </scm>
+
+  <properties>
+    <compiler.source>1.8</compiler.source>
+    <compiler.target>${compiler.source}</compiler.target>
+    <java.version>${compiler.source}</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <spring-boot.version>2.7.7</spring-boot.version>
+    <fastjson2.version>2.0.26</fastjson2.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba.fastjson2</groupId>
+        <artifactId>fastjson2</artifactId>
+        <version>${fastjson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.lijunyi</groupId>
+        <artifactId>log-tracing-spring-boot-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${compiler.source}</source>
+          <target>${compiler.source}</target>
+          <encoding>UTF-8</encoding>
+          <compilerArgument>-Xlint:unchecked</compilerArgument>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <additionalJOption>-Xdoclint:none</additionalJOption>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

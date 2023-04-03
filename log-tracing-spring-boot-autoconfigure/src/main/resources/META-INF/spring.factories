@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.lijunyi.logtracing.aspect.LogAspect,\
+  cn.lijunyi.logtracing.config.autoconfigure.JsonParserAutoConfiguration,\
+  cn.lijunyi.logtracing.config.factory.LogJsonParserFactory,\
+  cn.lijunyi.logtracing.service.impl.JacksonParser,\
+  cn.lijunyi.logtracing.service.impl.FastJson2Parser
