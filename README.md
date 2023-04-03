@@ -48,6 +48,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 ##### 2、引入依赖
 
 ```xml
+<!--目前maven正在申请发布，还未推送到中央仓库-->
 <dependency>
    <groupId>cn.lijunyi</groupId>
    <artifactId>log-tracing-spring-boot-starter</artifactId>
