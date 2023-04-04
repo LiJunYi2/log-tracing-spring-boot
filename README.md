@@ -48,18 +48,18 @@ SET FOREIGN_KEY_CHECKS = 1;
 ##### 2、引入依赖
 
 ```xml
-<!--目前maven正在申请发布，还未推送到中央仓库-->
+<!--引入依赖-->
 <dependency>
-   <groupId>cn.lijunyi</groupId>
-   <artifactId>log-tracing-spring-boot-starter</artifactId>
-   <version>${latest-version}</version>
+  <groupId>xyz.lijunyi</groupId>
+  <artifactId>log-tracing-spring-boot-starter</artifactId>
+  <version>1.0.1.RELEASE</version>
 </dependency>
 
 <!--如果需要使用fastjson2进行解析入参则引入-->
 <dependency>
     <groupId>com.alibaba.fastjson2</groupId>
     <artifactId>fastjson2</artifactId>
-    <version>2.0.24</version>
+    <version>${latest-version}</version>
 </dependency>
 ```
 
