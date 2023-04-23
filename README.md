@@ -52,14 +52,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 <dependency>
   <groupId>xyz.lijunyi</groupId>
   <artifactId>log-tracing-spring-boot-starter</artifactId>
-  <version>1.0.1.RELEASE</version>
-</dependency>
-
-<!--如果需要使用fastjson2进行解析入参则引入-->
-<dependency>
-    <groupId>com.alibaba.fastjson2</groupId>
-    <artifactId>fastjson2</artifactId>
-    <version>${latest-version}</version>
+  <version>1.0.2.RELEASE</version>
 </dependency>
 ```
 
