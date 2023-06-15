@@ -52,7 +52,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 <dependency>
   <groupId>xyz.lijunyi</groupId>
   <artifactId>log-tracing-spring-boot-starter</artifactId>
-  <version>1.0.2.RELEASE</version>
+  <version>1.0.3.RELEASE</version>
 </dependency>
 ```
 
